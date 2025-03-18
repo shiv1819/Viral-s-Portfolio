@@ -1,0 +1,46 @@
+img {
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "refoke-regular";
+
+}
+
+@font-face {
+    font-family: "Morganite-Medium";
+    src: url(/Fonts/Morganite-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Morganite-SemiBold";
+    src: url(/Fonts/Morganite-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Morganite-Book";
+    src: url(/Fonts/Morganite-Book.ttf);
+}
+
+@font-face {
+    font-family: "Morganite-SemiBold";
+    src: url(/Fonts/Morganite-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "refoke-regular";
+    src: url(/Fonts/refoke-regular.otf);
+}
+
+@font-face {
+    font-family: "refoke-bold";
+    src: url(/Fonts/refoke-bold.otf);
+}
+
+@font-face {
+    font-family: "refoke-black";
+    src: url(/Fonts/refoke-black.otf);
+}
