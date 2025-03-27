@@ -11,6 +11,24 @@ img {
 
 }
 
+[data-scroll-container] {
+    min-height: 100vh;
+    overflow: hidden;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    user-select: none;
+}
+
+
 @font-face {
     font-family: "Morganite-Medium";
     src: url(/Fonts/Morganite-Medium.ttf);
@@ -83,10 +101,14 @@ section {
     z-index: 9999;
 }
 
+.c-scrollbar_thumb {
+    background: linear-gradient(to bottom, #c2c2f0, #d9b3ff, #ffb3b3, #ffdbb3);
+    opacity: 1 !important;
+}
+
 .scroll-progress-bar {
     height: 100%;
     background: linear-gradient(to left, #c2c2f0, #d9b3ff, #ffb3b3, #ffdbb3);
-
     transition: width 0.2s ease;
     border-radius: 2px;
 }

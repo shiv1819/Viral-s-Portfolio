@@ -18,6 +18,8 @@
     "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
     "howler": "^2.2.4",
+    "lenis": "^1.2.3",
+    "locomotive-scroll": "^4.1.4",
     "motion": "^12.6.2",
     "ogl": "^1.0.11",
     "react": "^19.0.0",
