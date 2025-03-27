@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../assets/css/Home.scss';
 import { Container } from 'react-bootstrap';
 
+// import Logo from '../images/Logo2.svg';
+
 const Header = () => {
     const navRef = useRef(null);
     const buttonRef = useRef(null);
@@ -23,9 +25,9 @@ const Header = () => {
         event.preventDefault();
 
         if (navRef.current?.classList.contains('active')) {
-            window?.playSoundEffect?.('power-down');
+            window.playSoundEffect?.('power-down');
         } else {
-            window?.playSoundEffect?.('power-up');
+            window.playSoundEffect?.('power-up');
         }
 
         navRef.current?.classList.remove('first-run');
@@ -55,11 +57,12 @@ const Header = () => {
     return (
         <Container>
             {/* Exploding Nav */}
-
-
-            {/* Header */}
             <header id="Header">
-                <div ref={navRef} className="exploding-nav first-run" style={{ '--navCount': 3 }}>
+                <div
+                    ref={navRef}
+                    className="exploding-nav first-run"
+                    style={{ '--navCount': 3 }}
+                >
                     <button
                         ref={buttonRef}
                         className="exploding-nav-button"
@@ -68,28 +71,40 @@ const Header = () => {
                         <img
                             className="face"
                             src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto/jason.energy/jason-brains.png"
-                            alt=""
+                            alt="Face"
                         />
                     </button>
                     <nav className="home-page-nav">
                         <a className="home-item" href="/#bio" style={{ '--offset': 1 }}>
                             About Jason
-                            <img src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto/jason.energy/camera.png" alt="" />
+                            <img
+                                src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto/jason.energy/camera.png"
+                                alt="Camera"
+                            />
                         </a>
                         <a className="home-item" href="/#teaching" style={{ '--offset': 2 }}>
                             Teaching
-                            <img src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto/jason.energy/terminal.png" alt="" />
+                            <img
+                                src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto/jason.energy/terminal.png"
+                                alt="Terminal"
+                            />
                         </a>
                         <a className="home-item" href="/#newsletter" style={{ '--offset': 3 }}>
                             Newsletter
-                            <img src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto/jason.energy/newsletter.png" alt="" />
+                            <img
+                                src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto/jason.energy/newsletter.png"
+                                alt="Newsletter"
+                            />
                         </a>
                     </nav>
                 </div>
 
+                {/* Logo */}
                 <div className="HeaderLogo">
                     <img src="../images/Logo2.svg" alt="Logo" />
                 </div>
+
+                {/* Header Content */}
                 <div className="HeaderContent">
                     <ul>
                         <li>
@@ -107,9 +122,7 @@ const Header = () => {
                     </ul>
                 </div>
             </header>
-
-
-        </Container >
+        </Container>
     );
 };
 
